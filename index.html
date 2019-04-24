@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>One single page</title>
+</head>
+
+<body>
+  
+  <div class="grid-container">
+      <div class="box1">
+          <a href="#" class="name">Stefano G.</a>
+           <!--inizio nav-->
+            <div class="topnav" id="myTopnav">
+              <a href="#about" class="active">About</a>
+              <a href="#gitHub">Github</a>
+              <a href="#freeCode">Freecode</a>
+              <a href="#codeWar">Codewar</a>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div><!--inizio nav-->
+
+            <div class="title">
+              <h5>Hello, I'am</h5>
+              <h1>Stefano G.</h1>
+              <p>Graphic Designer from Milan, Italy</p>
+            </div>
+
+            <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+          
+      </div><!--FINE BOX 1-->
+      
+      <div class="box2">
+          <img src="img/profile1.svg" alt="vector">
+      </div>
+  </div>
+  
+  <!--FASCIA GRIGIA -->
+  <section class="fasciaGrigia">
+     <div class="container" id="about">
+         <h3>About Me</h3>
+         <p>I am Stefano, I am 40 years old graphic designer from Milan, Italy. I worked in an Advertising agency  for long time designing mainly for the print. It is time for me to change and learn something new. <br> I would like to change my career, becoming a web developer. Over the last years I did some short evening courses about html and css. It was very hard at the beginning learning coding.</p><br>
+         <p>During the university I lived in london for 2 years. It would be nice for me to come back to learn web developtment and new skills. I went to Founders and Coders on January for a small chat to introduce myself.</p>
+     </div>
+      
+  </section> 
+  <!--FASCIA GRIGIA -->
+  
+  <!--FASCIA GALLERY -->
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/milan1.jpg" style="width:100%">
+  <div class="text">The Duomo</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/milan2.jpg" style="width:100%">
+  <div class="text">Centrale the train station</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/milan3.jpg" style="width:100%">
+  <div class="text">Navigli the nightlife</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<!--
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>-->
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  
+  <!--FASCIA GALLERY -->
+  
+    <!--FASCIA GRIGIA -->
+  <section class="fasciaBianca" style="margin-top: 170px;">
+     <div class="container" id="gitHub">
+         <h3>My gitHub Account</h3>
+         <p>I opened my account. I am completely new to gitHub. Inside the One-Page Repository I put inside all the folders with my single page website. I need more time to know how it works gitHub. Down there is the link</p><br>
+         <p><a href="https://github.com/stegua5" class="linkProfile" target="_blank">Stegua5</a></p>
+     </div><!--FINE CONTAINER-->  
+  </section>
+  
+  
+  
+    <section class="fasciaBianca">
+     <div class="container" id="freeCode">
+         <h3>My freeCode Profile</h3>
+         <p>I opened the profile in freeCode. I completed all the minimal requirements. Actually I have 407 points. <br> I ended learning javascript until the chapter "Basic Algorithm Scripting". Down there is the link. </p><br>
+         <p><a href="https://www.freecodecamp.org/stegua" class="linkProfile" target="_blank">Stegua</a></p>
+     </div><!--FINE CONTAINER-->  
+  </section>
+  
+      <section class="fasciaBianca">
+     <div class="container" id="codeWar">
+         <h3>My codeWar Profile</h3>
+         <p>I opened the profile on codeWars. I am completely new on here. Actually I have 8kyu.   <br>I do not have 5 kyu and neither 500 points yet. I am woking on during my free time to get the correct requirements before july. Down there is the link.</p><br>
+         <p><a href="https://www.codewars.com/users/stegua5" class="linkProfile" target="_blank">Stegua5</a></p>
+     </div><!--FINE CONTAINER-->  
+  </section>
+  
+  <!--FASCIA GRIGIA -->
+  
+  <footer>
+      <div class="container">
+          <p style="text-align: center">Thanks for reading!</p>
+      </div>
+  </footer>
+   
+
+   
+</body>
+</html>
